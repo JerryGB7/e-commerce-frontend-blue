@@ -11,16 +11,16 @@ pipeline {
         git 'https://github.com/JerryGB7/e-commerce-frontend-blue.git'
       } 
     }
-    stage('stop docker containers'){
-      steps{
-        catchError(buildResult: 'SUCCESS'){
-          sh 'docker stop fe-commerce-app'
-        }
-        catchError(buildResult: 'SUCCESS'){
-          sh 'docker rm -f fe-commerce-app'
-        }
-      }
-    }
+//     stage('stop docker containers'){
+//       steps{
+//         catchError(buildResult: 'SUCCESS'){
+//           sh 'docker stop fe-commerce-app'
+//         }
+//         catchError(buildResult: 'SUCCESS'){
+//           sh 'docker rm -f fe-commerce-app'
+//         }
+//       }
+//     }
     stage('Build the image'){
       steps{
         script{
