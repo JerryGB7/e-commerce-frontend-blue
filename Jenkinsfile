@@ -21,13 +21,13 @@ pipeline {
 //         }
 //       }
 //     }
-//     stage('Build the image'){
-//       steps{
-//         script{
-//           dockerImage = docker.build registry + ":$BUILD_NUMBER"
-//         }
-//       }
-//     }
+    stage('Build the image'){
+      steps{
+        script{
+          dockerImage = docker.build registry + ":$BUILD_NUMBER"
+        }
+      }
+    }
 //     stage('Deploy our image'){
 //       steps{
 //         script{
